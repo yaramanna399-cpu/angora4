@@ -6,8 +6,6 @@ import { Link } from "react-router-dom";
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
 
-
-
 export default function MainSlider() {
   const settings = {
     dots: true,
@@ -23,12 +21,13 @@ export default function MainSlider() {
     dotsClass: "slick-dots custom-dots", 
   };
 
+  
   const slides = [
     {
       id: 1,
       title: "Fresh Products Delivered to your Door",
       desc: "Get 20% off your first order",
-      bgImage: "https://freshcart-route.vercel.app/static/media/slider-image-2.3f773463.jpeg",
+      bgImage: "https://images.unsplash.com/photo-1542838132-92c53300491e?q=80&w=2000", 
       btn1: "Shop Now",
       btn2: "View Deals"
     },
@@ -36,7 +35,7 @@ export default function MainSlider() {
       id: 2,
       title: "Big Discount on Groceries",
       desc: "Healthy food for a healthy life",
-      bgImage: "https://freshcart-route.vercel.app/static/media/slider-image-1.47226685.jpeg",
+      bgImage: "https://images.unsplash.com/photo-1542838132-92c53300491e?q=80&w=2000",
       btn1: "Order Now",
       btn2: "Delivery Info"
     },
@@ -44,7 +43,7 @@ export default function MainSlider() {
       id: 3,
       title: "Fast & Free Delivery",
       desc: "Same day delivery available",
-      bgImage: "https://freshcart-route.vercel.app/static/media/slider-image-3.0ad193c5.jpeg", 
+      bgImage: "https://images.unsplash.com/photo-1542838132-92c53300491e?q=80&w=2000", 
       btn1: "Order Now",
       btn2: "Delivery Info"
     }
@@ -71,20 +70,21 @@ export default function MainSlider() {
               
               <div className="container h-100 position-relative" style={{ zIndex: 3 }}>
                 <div className="row h-100 align-items-center">
-                  <div className="col-lg-7 col-md-9 text-white">
-                    
-                    <h1 className="main-title fw-bold mb-3 slide-up-text display-4">
+                  <div className="col-lg-7 col-md-9 text-white px-4 px-md-0">
+                    <h1 className="main-title fw-bold mb-3 display-4">
                       {slide.title}
                     </h1>
-                    <p className="sub-title mb-5 slide-up-text fs-5" style={{ animationDelay: "0.2s" }}>
+                    <p className="sub-title mb-5 fs-5">
                       {slide.desc}
                     </p>
                     
                     
-                    <div className="d-flex gap-3 slide-up-text" style={{ animationDelay: "0.4s" }}>
+                    <div className="d-flex gap-3">
+                      
                       <Link to="/products" className="btn btn-light text-main fw-bold rounded-pill px-4 py-2 shadow-sm border-0">
                         {slide.btn1}
                       </Link>
+                      
                       <Link to="/products" className="btn btn-outline-light fw-bold rounded-pill px-4 py-2 shadow-sm" style={{ borderWidth: '2px' }}>
                         {slide.btn2}
                       </Link>
@@ -92,8 +92,6 @@ export default function MainSlider() {
                   </div>
                 </div>
               </div>
-
-              
             </div>
           </div>
         ))}
